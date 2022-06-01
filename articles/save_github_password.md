@@ -1,6 +1,6 @@
 ---
 title: "[ubuntuを使っている人へ]Githubのパスワードを保存しておく方法"
-emoji: "🐙"
+emoji: "😁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ubuntu]
 published: true
