@@ -81,4 +81,5 @@ Port 3000 is in use, trying another one...
 [ESLint] Found 0 error and 1 warning
 ```
 
-ちなみにviteは「ヴィート」と呼ぶのが正しいそうです。
+自分はviteは食わず嫌いをしていたのですが、一度使ってみるとbuild時間の速さに感動しました。
+型エラーとeslintのwarningを表示するとwebpackとほぼ変わらない開発が出来ると思うので、viteを使う人は[eslint-plugin-checker](https://github.com/fi3ework/vite-plugin-checker)の使用を検討してみてください
