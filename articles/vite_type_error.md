@@ -13,7 +13,7 @@ https://github.com/coadmap/react_vite_bp
 
 ## 型エラー, eslintのエラーを表示する方法
 [eslint-plugin-checker](https://github.com/fi3ework/vite-plugin-checker)を使用することで型エラーを表示できるようになります
-インストールをして、
+インストールをして、`vite.config.ts`ファイルに少し手を加えるだけでエラーを表示できるようになります。
 `npm i vite-plugin-checker -D`
 
 ```typescript:vite.config.ts
