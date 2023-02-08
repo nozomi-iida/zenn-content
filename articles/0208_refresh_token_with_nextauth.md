@@ -210,8 +210,8 @@ export default NextAuth({
 
 ## 参考
 
-https://next-auth.js.org/tutorials/refresh-token-rotation
-https://zenn.dev/yui/articles/b48a74ed717c6c
-https://wa3.i-3-i.info/word18474.html
+<https://next-auth.js.org/tutorials/refresh-token-rotation>
+<https://zenn.dev/yui/articles/b48a74ed717c6c>
+<https://wa3.i-3-i.info/word18474.html>
 
 [^1]: UNIX 時間とは「1970 年 1 月 1 日午前 0 時 0 分 0 秒（UTC）」からの経過秒数で表現したものです。
