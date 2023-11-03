@@ -39,6 +39,49 @@ router の `router.isFallback` を使用して、 `getStaticProps` の処理が�
 
 代わりに小さなページのサブセットを静的に生成し、残りを `fallback: true` することができる
 
+### 参考コード
+
+```tsx
+import { useRouter } from 'next/router'
+
+type Props = {
+  posts: Post[];
+};
+
+function Post({ post }: Props) {
+  const router = useRouter()
+
+	// getStaticProps()が終わるまで、「Loading...」表示される
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
+
+  // Render post...
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { id: '1' } }, { params: { id: '2' } }],
+    fallback: true,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const res = await fetch(`https://.../posts/${params.id}`)
+  const post = await res.json()
+
+  return {
+    props: { post },
+  }
+}
+
+export default Post
+```
+
+fallback: true の場合ビルド時に fallback バージョンのページを表示するため、props の型を指定しても post は初め undefined が渡ってしまう。
+
+そのため`router.isFallback` を使用して、 `getStaticProps` が渡されてから全てのページを表示するようにする必要がある
+
 ## fallback: `'blocking'`
 
 `getStaticPaths` で作成されていない新しいパスは HTML ファイルが作成されるのを待つ
